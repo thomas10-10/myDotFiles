@@ -9,16 +9,8 @@ apt update
 apt install iputils-ping -y
 apt install i3 -y
 apt install vim -y
-apt install chromium -y
 apt install xterm -y
-###########################apt install atom################
-apt install curl -y
-apt install gnupg2 -y
-curl -L https://packagecloud.io/AtomEditor/atom/gpgkey | apt-key add -
-echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any any main" >> /etc/apt/sources.list
-apt install apt-transport-https -y
-apt update
-apt install atom -y
+
 ############################I3-gapps#############################
 apt install git -y
 apt install dh-autoreconf -y
@@ -37,6 +29,7 @@ mkdir -p build && cd build/
 ../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers
 make
 make install
+
 ###########################POLYBAR##############
 cd ~
 apt install x11-xfs-utils -y
@@ -49,10 +42,11 @@ mkdir polybar/build
 cd polybar/build
 cmake ..
 make install
-###############################CONF POLYBAR#######
 make userconfig
 
-###enable bitmap 
+###############################CONF POLYBAR#######
+
+#enable bitmap 
 cd /etc/fonts/conf.d/
 rm /etc/fonts/conf.d/10*  
 rm -rf 70-no-bitmaps.conf 
@@ -67,9 +61,11 @@ git clone https://github.com/stark/siji && cd siji
 fc-cache
 cd ~
 
+#pywal
 apt install python3-pip -y
 pip3 install pywal
 apt install imagemagick -y
+
 apt install alsa-utils -y
 apt install ranger -y
 apt install compton -y
@@ -870,7 +866,44 @@ cp -r ~/$config_ress/.* ~/
 #####################################################################################################################
 
 
+#####SOFTWARE#########
 
+apt install chromium -y
+###########################apt install atom################
+apt install curl -y
+apt install gnupg2 -y
+curl -L https://packagecloud.io/AtomEditor/atom/gpgkey | apt-key add -
+echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any any main" >> /etc/apt/sources.list
+apt install apt-transport-https -y
+apt update
+apt install atom -y
+
+
+
+##########################swm-socle#######################
+cat <<"EOF" >~/swm-socle
+clear
+echo "
+1) i3
+Q) NOPE
+"
+
+lastD=`ls -l /tmp/.X11-unix/ | tail -n1 | grep -o "X[0-9]*" | tr -d "X"`
+read -p "choice : " rep
+clear
+case $rep in
+
+	"1") DISPLAY=:${lastD} i3
+	
+	;;
+
+	"Q") exit 1
+	
+	;;
+
+esac
+clear
+EOF
 
 
 
