@@ -111,7 +111,7 @@ exec_always --no-startup-id /usr/local/bin/polybar.sh
 # gaps config
 # Set inner/outer gaps
 gaps inner 10
-gaps outer 15
+gaps outer 0
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
