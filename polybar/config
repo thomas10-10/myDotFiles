@@ -45,9 +45,9 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 =  Siji:Regular:pixelsize=10;0
-font-1 =  Siji:Bold:fontformat=truetype:size=8:antialias=false;0
-font-2 =  Siji:Bold:pixelsize=10;1
+font-0 =  JetBrainsMono Nerd Font Mono:Regular:pixelsize=10;0
+font-1 =  JetBrainsMono Nerd Font Mono:Bold:fontformat=truetype:size=8:antialias=false;0
+font-2 =  JetBrainsMono Nerd Font Mono:Bold:pixelsize=10;1
 
 modules-left = bspwm i3
 modules-center = mpd
