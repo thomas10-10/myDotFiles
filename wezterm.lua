@@ -1,6 +1,7 @@
 local wezterm = require 'wezterm';
 
 return {
+  window_background_opacity = 0.1,
   --font = wezterm.font("Fira Code"),
   font = wezterm.font("JetBrainsMono Nerd Font Mono"),
   color_scheme = "Pandora",
