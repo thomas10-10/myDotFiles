@@ -8,7 +8,7 @@ echo "Bars launched..."
 killall -q compton
 compton -c -r 4 -l -4 -t -4 -G -f -b
 killall back4.sh
-bash back4.sh 0.02 /usr/local/src/foo-Wallpaper-Feh-Gif.git/gif/pixel.gif &
+back4.sh 0.02 /usr/local/src/foo-Wallpaper-Feh-Gif.git/gif/pixel.gif &
 #compton -f
 #feh --bg-scale ~root/wall/213493.png 
 #xrdb ~/.Xresources
