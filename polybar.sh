@@ -7,7 +7,7 @@ polybar example &
 echo "Bars launched..."
 killall -q compton
 compton -c -r 4 -l -4 -t -4 -G -f -b
-kill $(ps aux | grep 'back4' | awq '{print $2}')
+kill $(ps aux | grep 'back4' | awk '{print $2}')
 #killall back4.sh
 back4.sh 0.02 /usr/local/src/foo-Wallpaper-Feh-Gif.git/gif/pixel.gif &
 #compton -f
